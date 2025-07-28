@@ -1,0 +1,262 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        transition: 0.25s;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(141deg, cyan, blue);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px #0000002B;
+        background: white;
+        height: 350px;
+        width: 250px;
+        
+        gap: 8px;
+      }
+      .reg-form, .log-form {
+        display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: column;
+width: 100%;
+height: 100%;
+gap: 8px;
+      }
+      .s-con {
+        display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 100%;
+height: 100%;
+gap: 50px;
+transform: translateX(145px)
+      }
+
+      .container h1 {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+      }
+      .container .i-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #474747;
+      }
+      .container input, .container button {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+      }
+      .container input {
+        border: none;
+        padding: 5px;
+      }
+      .container input:focus {
+        outline: none;
+        font-size: 1em;
+      }
+      .i-box i {
+        font-size: 1.2em;
+        margin-left: 10px;
+      }
+      .container button {
+        background: #13C2FF;
+        border: none;
+      }
+      .container button:hover {
+        color: white;
+        transform: scale(0.98)
+      }
+      .container p {
+        font-size: 0.95em;
+        white-space: nowrap;
+      }
+      .box {
+        width: 100%;
+        height: 40px;
+        background: #38A1FF;
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px #00000052;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+        color: white;
+      }
+      .box:hover {
+        transform: scale(0.98)
+      }
+      .box i {
+        font-size: 1.2em;
+      }
+      .box:hover {
+        color: white;
+      }
+      .seperator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 1px;
+        gap: 5px;
+      }
+      .seperator hr {
+        border: none;
+        background: #202020;
+        width: 95%;
+        height: 100%
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="sCon" class="s-con">
+      <div class="reg-form">
+      <h1>Register</h1>
+      <div class="i-box">
+        <i class="fa-solid fa-user"></i>
+        <input id="euname" type="name" placeholder="username">
+      </div>
+      
+       <div class="i-box">
+<i class="fa-solid fa-envelope"></i>
+   <input id="eput" placeholder="name@gmail.com" type="email">
+ </div>
+ 
+        <div class="i-box">
+<i alt="Click to view password" id="passIcon" onclick="unhide()" class="fa-solid fa-lock"></i>
+         <input id="pass" type="password" placeholder="********">
+       </div>
+      
+     
+      <button onclick="check()" >Sign up</button>
+      <p>Already have an account? <span style="color: #007BFF" onclick="STOL()">Login</span></p>
+     
+     <div class="seperator">
+       <hr>Or<hr>
+     </div>
+     
+        <div onclick="alert('Not available')" class="box">
+          <i class="fab fa-google"></i>
+          <label>Continue with Google</label>
+        </div>
+        </div>
+        
+        <div class="log-form">
+          <h1>Login</h1>
+      
+       <div class="i-box">
+<i class="fa-solid fa-envelope"></i>
+   <input id="eput2" placeholder="name@gmail.com" type="email">
+ </div>
+ 
+        <div class="i-box">
+<i alt="Click to view password" id="passIcon" onclick="unhide()" class="fa-solid fa-lock"></i>
+         <input id="pass2" type="password" placeholder="********">
+       </div>
+      
+     
+      <button onclick="check2()" >Login</button>
+      <p>Don't have an account? <span style="color: #007BFF" onclick="STOL2()">Sign up</span></p>
+     
+     <div class="seperator">
+       <hr>Or<hr>
+     </div>
+     
+        <div onclick="alert('Not available')" class="box">
+          <i class="fab fa-google"></i>
+          <label>Continue with Google</label>
+        </div>
+        </div>
+        </div>
+    </div>
+    
+    <script>
+      let passInput = document.getElementById("pass");
+      let passIcon = document.getElementById("passIcon");
+      let sCon = document.getElementById("sCon");
+      
+      function check() {
+        let uname = document.getElementById("euname").value;
+        let eput = document.getElementById("eput").value;
+        let passInput = document.getElementById("pass").value;
+        
+        if(!uname || !eput || !passInput ) {
+          alert("Enter inputs to continue")
+          return;
+        } else {
+          alert("Your account has been created!")
+        }
+      }
+      
+      function check2() {
+  let eput2 = document.getElementById("eput2").value;
+  let passInput2 = document.getElementById("pass2").value;
+  
+  if (!eput2 || !passInput2) {
+    alert("Enter inputs to continue")
+    return;
+  } else {
+    alert("Login succesful!")
+  }
+}
+      
+      function STOL() {
+        if(sCon.style.transform === 'translateX(-145px)') {
+          sCon.style.transform = 'translateX(145)'
+        } else {
+          sCon.style.transform = 'translateX(-145px)'
+        }
+      }
+      
+      function STOL2() {
+  if (sCon.style.transform === 'translateX(145px)') {
+    sCon.style.transform = 'translateX(-145)'
+  } else {
+    sCon.style.transform = 'translateX(145px)'
+  }
+}
+      
+      
+     function unhide() {
+        if(passInput.type === "text") {
+          passInput.type = "password"
+          passIcon.classList.remove("fa-lock-open")
+          passIcon.classList.add("fa-lock")
+        } else {
+          passInput.type = "text"
+          passIcon.classList.remove("fa-lock")
+passIcon.classList.add("fa-lock-open")
+        }
+      }
+    </script>
+  </body>
+</html>
