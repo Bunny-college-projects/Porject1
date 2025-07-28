@@ -1,0 +1,88 @@
+<html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .card {
+      background: white;
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px #0000001A;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .card h3 {
+      color: #0072ff;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+    
+    .card p {
+      color: #444;
+      flex-grow: 1;
+      font-size: 0.95em;
+    }
+    
+    .card button {
+      margin-top: 15px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      color: white;
+      font-weight: 600;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    
+    .card button:hover {
+      opacity: 0.9;
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="card">
+    <h3>Calculator</h3>
+    <p>A simple calculator for addition, subtraction, multiplication, and division using HTML, CSS, and JavaScript.</p>
+    <button onclick="window.location.href='calculator-with-buttons.html'">View Project</button>
+  </div>
+  
+  <div class="card">
+    <h3>College Site</h3>
+    <p>A simple homepage for a college, designed with simple and clean UI using HTML and CSS only.</p>
+    <button onclick="window.location.href='college-site.html'">View Project</button>
+  </div>
+  
+  <div class="card">
+    <h3>Sign Up Page</h3>
+    <p>A simple sign-up & login form built using Html, Css and Javascript.</p>
+    <button onclick="window.location.href='sign-up.html'">View Project</button>
+  </div>
+  
+</body>
+
+</html>
