@@ -1,0 +1,129 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+                
+                padding: 15px;
+            }
+            .hero {
+                width: 98%;
+                height: 250px;
+                justify-content: space-between;
+                display: flex;
+                position: fixed;
+                top: 10;
+                left: 5;
+                border-radius: 10px;
+                background: #4287f5;
+                padding: 10px;
+                gap: 10px;
+            }
+            .avtar, .right {
+                height: 100%;
+                width: 50%;
+                background: white;
+                border: 10px;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .avtar img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin: 8px
+            }
+            .avtar .des {
+                display: flex;
+                flex-direction: column;
+            }
+            .des h2 {
+                font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+            
+            }
+            .des p {
+                font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: bold;
+  text-wrap: wrap;
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+            .mode:hover, .more:hover {
+                background: #cbe8f7;
+                
+            }
+            .right .mode:hover i,.right
+             .more:hover i {
+                color: white;
+            }
+            .right .mode {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+            .right .more {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+            .right hr {
+                background-color: #2e2e2e;
+                height: 1.5px;
+                width: 100%;
+            }
+            .right .more i, .mode i {
+                font-size: 4em;
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="avtar">
+                <img src="C:\bunny\rishabh bunny\nebux2.png">
+                <div class="des">
+                    <h2>NeBux</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="mode">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <hr>
+                <div class="more">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
